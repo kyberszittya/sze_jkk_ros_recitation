@@ -1,0 +1,10 @@
+
+ev3_joint_publisher:
+  type: "joint_state_controller/JointStateController"
+  publish_rate: 50
+ev3_velocity_controller:
+  type: "diff_drive_controller/DiffDriveController"
+  left_wheel: ['left_driven_wheel','left_undriven_wheel']
+  right_wheel: ['right_driven_wheel', 'right_undriven_wheel']
+  pose_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.03]
+  twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.03]

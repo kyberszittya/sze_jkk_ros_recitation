@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<robot name="ev3">
+  <link name="base_link">
+    <visual>
+      <material name="WHITE">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+      <geometry>
+        <box size="0.07999999821186066 0.10000000149011612 0.05000000074505806"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="2.0"/>
+      <inertia ixx="7.416666490336262E-4" ixy="0.0" ixz="0.0" iyy="0.0010416666977107528" iyz="0.0" izz="0.001366666667660078"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <box size="0.07999999821186066 0.10000000149011612 0.05000000074505806"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="camera_link">
+    <visual>
+      <material name="PURPLE">
+        <color rgba="1.0 0.0 1.0 1.0"/>
+      </material>
+      <geometry>
+        <box size="0.05000000074505806 0.05000000074505806 0.05000000074505806"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0.05"/>
+      <inertia ixx="4.166666790843011E-4" ixy="0.0" ixz="0.0" iyy="4.166666790843011E-4" iyz="0.0" izz="4.166666790843011E-4"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <box size="0.05000000074505806 0.05000000074505806 0.05000000074505806"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="laser_link">
+    
+  </link>
+  <link name="axial_link">
+    <visual>
+      <material name="WHITE">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+      <geometry>
+        <box size="0.03999999910593033 0.15000000596046448 0.03999999910593033"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="2.6666665474573786E-4" ixy="0.0" ixz="0.0" iyy="0.0020083334763844837" iyz="0.0" izz="0.0020083334763844837"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <box size="0.03999999910593033 0.15000000596046448 0.03999999910593033"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="left_large_motor">
+    <visual>
+      <material name="WHITE">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+      <geometry>
+        <box size="0.019999999552965164 0.15000000596046448 0.029999999329447746"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="1.08333328490456E-4" ixy="0.0" ixz="0.0" iyy="0.0019500001456588536" iyz="0.0" izz="0.0019083334808548322"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <box size="0.019999999552965164 0.15000000596046448 0.029999999329447746"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_large_motor">
+    <visual>
+      <material name="WHITE">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+      <geometry>
+        <box size="0.019999999552965164 0.15000000596046448 0.029999999329447746"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="1.08333328490456E-4" ixy="0.0" ixz="0.0" iyy="0.0019500001456588536" iyz="0.0" izz="0.0019083334808548322"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <box size="0.019999999552965164 0.15000000596046448 0.029999999329447746"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_undriven_axis">
+    <visual>
+      <material name="WHITE">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+      <geometry>
+        <cylinder length="0.02" radius="0.02"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="1.3333333E-4" ixy="0.0" ixz="0.0" iyy="1.3333333E-4" iyz="0.0" izz="2.0E-4"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <cylinder length="0.02" radius="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_driven_axis">
+    <visual>
+      <material name="WHITE">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+      <geometry>
+        <cylinder length="0.02" radius="0.02"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="1.3333333E-4" ixy="0.0" ixz="0.0" iyy="1.3333333E-4" iyz="0.0" izz="2.0E-4"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <cylinder length="0.02" radius="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="left_undriven_axis">
+    <visual>
+      <material name="WHITE">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+      <geometry>
+        <cylinder length="0.02" radius="0.02"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="1.3333333E-4" ixy="0.0" ixz="0.0" iyy="1.3333333E-4" iyz="0.0" izz="2.0E-4"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <cylinder length="0.02" radius="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="left_undriven_wheel">
+    <visual>
+      <material name="WHITE">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+      <geometry>
+        <cylinder length="0.02" radius="0.03"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="2.583333E-4" ixy="0.0" ixz="0.0" iyy="2.583333E-4" iyz="0.0" izz="4.5E-4"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <cylinder length="0.02" radius="0.03"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_undriven_wheel">
+    <visual>
+      <material name="WHITE">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+      <geometry>
+        <cylinder length="0.02" radius="0.03"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="2.583333E-4" ixy="0.0" ixz="0.0" iyy="2.583333E-4" iyz="0.0" izz="4.5E-4"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <cylinder length="0.02" radius="0.03"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="left_driven_axis">
+    <visual>
+      <material name="WHITE">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+      <geometry>
+        <cylinder length="0.02" radius="0.02"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="1.3333333E-4" ixy="0.0" ixz="0.0" iyy="1.3333333E-4" iyz="0.0" izz="2.0E-4"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <cylinder length="0.02" radius="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_driven_wheel">
+    <visual>
+      <material name="PURPLE">
+        <color rgba="1.0 0.0 1.0 1.0"/>
+      </material>
+      <geometry>
+        <cylinder length="0.02" radius="0.03"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="2.583333E-4" ixy="0.0" ixz="0.0" iyy="2.583333E-4" iyz="0.0" izz="4.5E-4"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <cylinder length="0.02" radius="0.03"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="left_driven_wheel">
+    <visual>
+      <material name="PURPLE">
+        <color rgba="1.0 0.0 1.0 1.0"/>
+      </material>
+      <geometry>
+        <cylinder length="0.02" radius="0.03"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="2.583333E-4" ixy="0.0" ixz="0.0" iyy="2.583333E-4" iyz="0.0" izz="4.5E-4"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <cylinder length="0.02" radius="0.03"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="base_to_axial" type="fixed">
+    <parent link="base_link"/>
+    <child link="axial_link"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <origin rpy="0.02740167 0.0 0.0" xyz="0.05 0.0 -0.02"/>
+  </joint>
+  <joint name="axial_to_motor_left" type="fixed">
+    <parent link="axial_link"/>
+    <child link="left_large_motor"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin rpy="0.0 0.0 1.5707964" xyz="0.0 -0.075 0.0"/>
+  </joint>
+  <joint name="axial_to_motor_right" type="fixed">
+    <parent link="axial_link"/>
+    <child link="right_large_motor"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin rpy="0.0 0.0 -1.5707964" xyz="0.0 0.075 0.0"/>
+  </joint>
+  <joint name="axial_left_undriven" type="fixed">
+    <parent link="left_large_motor"/>
+    <child link="left_undriven_axis"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin rpy="0.0 -1.5707964 0.0" xyz="-0.02 0.07 0.0"/>
+  </joint>
+  <joint name="axial_left_driven" type="fixed">
+    <parent link="left_large_motor"/>
+    <child link="left_driven_axis"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin rpy="0.0 -1.5707964 0.0" xyz="-0.02 -0.07 0.0"/>
+  </joint>
+  <joint name="axial_right_undriven" type="fixed">
+    <parent link="right_large_motor"/>
+    <child link="right_undriven_axis"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin rpy="0.0 1.5707964 0.0" xyz="-0.02 -0.07 0.0"/>
+  </joint>
+  <joint name="axial_right_driven" type="fixed">
+    <parent link="right_large_motor"/>
+    <child link="right_driven_axis"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin rpy="0.0 1.5707964 0.0" xyz="-0.02 0.07 0.0"/>
+  </joint>
+  <joint name="left_driven_wheel" type="continuous">
+    <parent link="left_driven_axis"/>
+    <child link="left_driven_wheel"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin xyz="0.0 0.0 0.02"/>
+  </joint>
+  <joint name="right_driven_wheel" type="continuous">
+    <parent link="right_driven_axis"/>
+    <child link="right_driven_wheel"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin xyz="0.0 0.0 -0.02"/>
+  </joint>
+  <joint name="right_undriven_wheel" type="continuous">
+    <parent link="right_undriven_axis"/>
+    <child link="right_undriven_wheel"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin xyz="0.0 0.0 -0.02"/>
+  </joint>
+  <joint name="left_undriven_wheel" type="continuous">
+    <parent link="left_undriven_axis"/>
+    <child link="left_undriven_wheel"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin xyz="0.0 0.0 0.02"/>
+  </joint>
+  <joint name="base_laser_link" type="fixed">
+    <parent link="base_link"/>
+    <child link="laser_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin xyz="0.13 0.0 -0.02"/>
+  </joint>
+  <joint name="camera_link_base" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin xyz="0.07 0.0 0.03"/>
+  </joint>
+  <gazebo reference="laser_link">
+    <sensor type="ray" name="head_hokuyo_sensor">
+      <pose>0.5 0 0 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>40</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>400</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.0</min_angle>
+            <max_angle>1.0</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>5.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_head_laser_controller" filename="libgazebo_ros_laser.so">
+        <topicName>/ev3/scan</topicName>
+        <frameName>laser_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <!-- camera -->
+  <gazebo reference="camera_link">
+    <sensor type="camera" name="camera1">
+      <update_rate>30.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>800</width>
+          <height>800</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise is sampled independently per pixel on each frame.
+               That pixel's noise value is added to each of its color
+               channels, which at that point lie in the range [0,1]. -->
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>ev3/camera1</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <transmission name="driven_left_motor">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_driven_wheel">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="actuator_driven_left">
+      <mechanicalReduction>1.0</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="driven_right_motor">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_driven_wheel">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="actuator_driven_right">
+      <mechanicalReduction>1.0</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="undriven_right_motor">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_undriven_wheel">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="actuator_undriven_left">
+      <mechanicalReduction>1.0</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="undriven_left_motor">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_undriven_wheel">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="actuator_undriven_left">
+      <mechanicalReduction>1.0</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <gazebo>
+    <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
+      <robotNamespace>/</robotNamespace>
+    </plugin>
+  </gazebo>
+</robot>

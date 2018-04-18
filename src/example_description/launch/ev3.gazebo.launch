@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launch>
+  <param name="robot_description" textfile="$(find example_description)/urdf/ev3.urdf"/>
+  <!--Load URDF-->
+  <node args="-param robot_description -urdf -model ev3" name="spawn_ev3" pkg="gazebo_ros" type="spawn_model"/>
+  <!--Load controller parameters-->
+  <rosparam command="load" file="$(find example_description)/config/ev3_control.yaml"/>
+  <node name="base_controller_spawner" pkg="controller_manager" type="spawner" ns="/" args="ev3_joint_publisher ev3_velocity_controller"/>
+  <!--State publishing-->
+  <node name="robot_state_publisher" output="screen" pkg="robot_state_publisher" respawn="false" type="robot_state_publisher"/>
+  <remap from="/joint_states" to="/joint_states"/>
+</launch>

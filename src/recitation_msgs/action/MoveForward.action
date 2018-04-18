@@ -1,0 +1,9 @@
+# Goal
+uint32 secs_sum
+float32 lin_vel
+---
+# Result
+bool success
+---
+# Feedback
+uint32 secs_elapsed
